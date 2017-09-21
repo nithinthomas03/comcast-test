@@ -7,10 +7,13 @@ import { AppComponent } from './app.component';
 import { ListDataService } from './list-data.service';
 import { MainComponent } from './main/main.component';
 
+import { OrderByColumnPipe } from './main/orderColumnBy';
+
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    OrderByColumnPipe
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,9 @@ import {ListDataService} from '../list-data.service';
 })
 export class MainComponent implements OnInit {
   results: any[];
+  isDesc: boolean = false;
+  column: string = 'name';
+  direction: number;
 
 
   constructor(private ListDataService: ListDataService) { }
@@ -18,6 +21,12 @@ export class MainComponent implements OnInit {
       console.log(this.results);
     });
     // console.log(this.ListDataService.getData()
+  }
+  sortcolumn(property:string){
+    console.log(property);
+    this.isDesc = !this.isDesc;
+    this.column = property;
+    this.direction = this.isDesc ? 1 : -1;
   }
 
 }

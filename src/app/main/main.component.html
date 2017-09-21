@@ -1,11 +1,11 @@
 <div>
   <table class="table table-bordered">
       <tr>
-        <th>name</th>
-        <th>category</th>
-        <th>amount</th>
+        <th class="pointer" (click)="sortcolumn('name')">name</th>
+        <th class="pointer" (click)="sortcolumn('category')">category</th>
+        <th class="pointer" (click)="sortcolumn('amount')">amount</th>
       </tr>
-      <tr *ngFor = "let result of results">
+      <tr *ngFor = "let result of results | orderColumnBy: {property: column, direction: direction}">
         <td>{{result.name}}</td>
         <td>{{result.category}}</td>
         <td>{{result.amount}}</td>
