@@ -8,16 +8,21 @@ import { ListDataService } from './list-data.service';
 import { MainComponent } from './main/main.component';
 
 import { OrderByColumnPipe } from './main/orderColumnBy';
+import { Main2Component } from './main-2/main-2.component';
+
+import { routing } from './app.routes';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    OrderByColumnPipe
+    OrderByColumnPipe,
+    Main2Component
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [ListDataService],
   bootstrap: [AppComponent]

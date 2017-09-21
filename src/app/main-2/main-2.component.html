@@ -1,0 +1,16 @@
+<div>
+  <table class="table table-bordered">
+      <tr>
+        <th class="pointer" (click)="sortcolumn('name')">name</th>
+        <th class="pointer">C1</th>
+        <th class="pointer">C2</th>
+        <th class="pointer">C3</th>
+      </tr>
+        <tr *ngFor = "let res of newData | orderColumnBy: {property: column, direction: direction}">
+            <td >{{res.name}}</td>
+            <td>{{res.C1}}</td>
+            <td>{{res.C2}}</td>
+            <td>{{res.C3}}</td>
+        </tr>
+  </table>
+</div>
