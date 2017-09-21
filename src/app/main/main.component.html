@@ -5,5 +5,10 @@
         <th>category</th>
         <th>amount</th>
       </tr>
+      <tr *ngFor = "let result of results">
+        <td>{{result.name}}</td>
+        <td>{{result.category}}</td>
+        <td>{{result.amount}}</td>
+    </tr>
   </table>
 </div>
